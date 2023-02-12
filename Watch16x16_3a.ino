@@ -192,12 +192,12 @@ Serial.println(len_sec);
 if (millis() - tpschimbare > tpsecunda)
 {
 if (secunda == 0)
-{
+  {
   FastLED.clear();
-  afisare_ora(a1, b1, c1, d1);
   leds[pgm_read_byte(&sec_0[secunda])] = CRGB(255,255,0);
   FastLED.show(); 
-}
+  afisare_ora(a1, b1, c1, d1); 
+  }
 tpschimbare = millis();
 }
 
