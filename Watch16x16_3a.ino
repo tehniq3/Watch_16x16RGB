@@ -6,6 +6,7 @@
 // v.2.b - line for seconds changed in moving point
 // v.3 - changed to ESP8266 -> NTP clock
 // v.3.a - added real seconds (fron NTP server)
+// v.3.a.1 - reduced flicker ar seconds = 0
 
 #include "FastLED.h"
 #include <NTPClient.h>
