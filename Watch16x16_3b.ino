@@ -115,7 +115,8 @@ c1 = minut/10;
 d1 = minut%10;
 
 iaData();
-Soare();  
+Soare(); 
+night();
   afisare_ora(a1, b1, c1, d1);
   FastLED.show(); 
   contor = secunda;
@@ -258,6 +259,7 @@ if (ora != oraanterioara)
 {
   iaData();
   Soare();
+  night();
 }
 oraanterioara = ora;
 delay(50);
