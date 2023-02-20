@@ -41,9 +41,11 @@ CRGB leds[NUM_LEDS];
 unsigned long tpschimbare;
 unsigned long tpsecunda = 1000;
 
+
 int a1;  // tens of hour
 int b1; // units of hour
 int c1; // tens of minute
+int c10 = 8; 
 int d1; // units of minute
 int d10 = 60;   
 int contor = 0;
@@ -92,11 +94,11 @@ pinMode (DSTpin, INPUT);
   FastLED.clear();
 
 noapte = 0;
-  afisare_ora(1, 2, 0, 0);
+  afisare_ora(1, 2, 3, 4);
 delay(3000);
   FastLED.clear();
 noapte = 1;
-  afisare_ora(2, 3, 5, 9);
+  afisare_ora(2, 3, 5, 6);
 delay(3000);
   FastLED.clear();
 
@@ -115,7 +117,7 @@ c1 = minut/10;
 d1 = minut%10;
 
 iaData();
-Soare(); 
+Soare();
 night();
   afisare_ora(a1, b1, c1, d1);
   FastLED.show(); 
@@ -255,22 +257,30 @@ d1 = minut%10;
   FastLED.show();  
 DST0 = DST;
 }
-if (ora != oraanterioara)
+//if (ora != oraanterioara)
+if (c10 != c1)
 {
   iaData();
   Soare();
   night();
 }
-oraanterioara = ora;
+//oraanterioara = ora;
+c10 = c1;
 delay(50);
 }  // end main loop
 
 
 void afisare_ora(int x, int y, int z, int w) {
     if (noapte == 1)
+    {
         FastLED.setBrightness (NIGHTBRIGHTNESS);
+        Serial.println(")");
+    }
       else
-        FastLED.setBrightness (DAYBRIGHTNESS); 
+    {
+        FastLED.setBrightness (DAYBRIGHTNESS);
+        Serial.println("*");
+    }
   //tens of hours
     if(x==0){
                 for (int i = 0; i < len_0; i++){           
