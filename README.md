@@ -20,3 +20,4 @@ can be use sketch: https://github.com/tehniq3/Watch_16x16RGB/blob/main/Watch16x1
 
 NTP schematic at high resolution: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhk6AjQf2jRfvrX-MfhmErwuYgoOHDXwQaznXysAdoFp8JKbtjXozPrQ_HoP1Q5ljLZ4VqXDSN7V-29sXgZwc1HupmYufMKol0kwk24gmDvzo6zkwKHnf3DSlWE_31K8ySVLHcvoLJLhKaq1XvAtaeKdL6AVT4qrNTj_176NYVNHixGgRdE9Wmms5fEQw/s1178/NTP_Clock_DST_16x16_WS2812_schematic.png
 
+RTC clock with DS18B20 (D9 pin) used "Watch16x16_2c.ino" sketch
